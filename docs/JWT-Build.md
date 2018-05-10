@@ -1,4 +1,4 @@
-# Pasos para crear un JTW 
+# Pasos para crear un JWT 
 
 ## Creación del encabezado
 
@@ -59,9 +59,7 @@ Volviendo a nuestro ejemplo, el servidor de autenticación (nuestra API) ahora p
 
 ## ¿Cómo determinar si el token expiró?
 
-Extraiga el valor de la clave `exp` (tiempo Unix) y conviértalo a formato de fecha y hora con el lenguaje de programación de su predilección. 
-
-> Recuerde que el valor es UTC y no GTM. 
+Extraiga el valor de la clave `exp` (tiempo Unix) y conviértalo a formato de fecha y hora con el lenguaje de programación de su predilección. Recuerde que el valor es **UTC** y no GTM. 
 
 Ejemplo C#
 
