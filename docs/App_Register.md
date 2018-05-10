@@ -5,9 +5,9 @@ Para poder hacer uso de esta API, se requiere el registro de una aplicación. Di
 El proceso para solicitar la información es muy sencillo:
 
 1. Identificarse como una aplicación reconocida por los sistemas de Processa.
-2. Invocar la operación que deseada.
+2. Invocar la operación deseada.
 
-Para solicitar el registro de una aplicación debe comunicarse con el área comercial de Processa. Ellos le entregaran la información necesaria para generar los valores de identificación. Finalmente obtendrá dos valores que en adelante llamaremos `appKey` y `appSecret`. 
+Para solicitar el registro de una aplicación debe comunicarse con el área comercial de Processa. Ellos le facilitaran la información necesaria para generar los valores de identificación de su aplicación. Finalmente obtendrá dos valores que en adelante llamaremos `appKey` y `appSecret`. 
 
 | Nombre        | Descripción |
 | ------------- |-------------
