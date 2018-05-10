@@ -1,9 +1,9 @@
 # Identificación de aplicaciones
 
-Para identificar una aplicación, se utiliza el estándar de la industria conocido como [JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token). JWT es un objeto [JSON](https://en.wikipedia.org/wiki/JSON) que se define en el [RFC 7519](https://tools.ietf.org/html/rfc7519) como una forma segura de representar un conjunto de información entre dos partes. El token se compone de un encabezado (header), una carga útil (en adelante Payload) y una firma (signature). En pocas palabras, un JWT es una cadena de texto con el siguiente formato:
+Para identificar una aplicación, se utiliza el estándar de la industria conocido como [JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token). JWT es un objeto [JSON](https://en.wikipedia.org/wiki/JSON) que se define en el [RFC 7519](https://tools.ietf.org/html/rfc7519) como una forma segura de representar un conjunto de información entre dos partes. El token se compone de un encabezado (header), una carga (en adelante payload) y una firma (signature). En pocas palabras, un JWT es una cadena de texto con el siguiente formato:
 
 ```
-header.payload.signature (cabecera.carga.firma)
+header.payload.signature
 ```
 <center>
 ![JWT](JWT.png "JSON Web Token")
