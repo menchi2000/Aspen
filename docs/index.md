@@ -4,7 +4,7 @@ El API para Terceros de Processa (**Aspen**) permite la conexión a través de u
 
 Entre otras operaciones permite:
 
-- Consultar saldos y movimiento de una cuenta
+- Consultar saldos y movimientos de una cuenta
 
 - Actualizar la información del PIN transaccional de una cuenta
 
