@@ -6,5 +6,5 @@ pages:
 - Introducción: index.md
 - Registro de aplicaciones: App_Register.md
 - Identificación de aplicaciones: App_Setup.md
-- Pasos para crear un JTW : JWT-Build.md
+- Pasos para crear un JWT : JWT-Build.md
 - Solicitar un token de autenticación: JWT-Request.md
