@@ -151,4 +151,8 @@ Si puedo solicitar un token en cualquier momento, se podría estar preguntando �
 
 Si en algún momento considera que la privacidad de la información de su aplicación se ha comprometido, puede solicitar el reinicio de dicha información simplemente generando un nuevo token. Cualquier valor emitido previamente será invalidado, evitando que usted tenga que desplegar una nueva versión de su aplicación.  Considere el token como una llave de acceso con fecha de vencimiento. Si sospecha que alguien tiene la llave, solo necesita cambiar la llave, nunca la cerradura completa. 
 
-> ¿A qué se refiere cuando habla de privacidad comprometida? Si alguien diferente a su aplicación conoce su `appSecret` o su `token de autenticación`, su información se ha visto comprometida.
+<div class="admonition warning">
+   <p class="first admonition-title">¿Privacidad comprometida?</p>
+   <p class="last">¿A qué se refiere cuando menciona privacidad comprometida? Si alguien diferente a su aplicación conoce su `appSecret` o su `token de autenticación`, su información se ha visto comprometida.
+   </p>
+</div>
