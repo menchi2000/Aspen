@@ -15,6 +15,8 @@ Para solicitar el registro de una aplicación debe comunicarse con el área come
 | `appSecret`   | Valor a utilizar en la [generación del JSON Web Token](JWT.md) |     
 
 
-<div class="alert alert-warning">
-Mantenga en un lugar seguro la información de identificación. Si en algún momento considera que la privacidad de la información se ha comprometido, solicite el reinicio de dicha información. Esto invalidará de forma inmediata la información comprometida. 
+<div class="admonition warning">
+   <p class="first admonition-title">Atención</p>
+   <p class="last">Mantenga en un lugar seguro la información de identificación. Si en algún momento considera que la privacidad de la información se ha comprometido, solicite el reinicio de dicha información. Esto invalidará de forma inmediata la información comprometida.
+   </p>
 </div>
