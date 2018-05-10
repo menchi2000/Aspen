@@ -1,6 +1,6 @@
 # Pasos para crear un JWT 
 
-## Creación del encabezado
+## Creación del encabezado (haeder)
 
 El encabezado es un objeto JSON en el siguiente formato. Su información se utilizará más adelante para determinar cómo calcular la firma del JWT.
 
@@ -10,7 +10,7 @@ El encabezado es un objeto JSON en el siguiente formato. Su información se util
 
 En este JSON, el valor de la clave `typ` especifica que el objeto es un JWT, y el valor de la clave `alg` especifica el algoritmo hash utilizado para crear el componente de la firma JWT. Utilizaremos el algoritmo HMAC-SHA256 (un algoritmo de hash que usa una clave secreta (`appSecret`), para calcular la firma como los veremos de manera detallada a continuación).
 
-## Creación de la carga (Payload)
+## Creación de la carga (payload)
 
 El componente de carga en un JWT es la información que está almacenada dentro del JWT (estos datos también se conocen como los `reclamos/claims` del JWT). En esta carga se pueden poner tantas reclamaciones/claims como se desee, es decir, que se pueden agregar tantas claves al JSON como se necesite. 
 Tenga presente que existen algunas claves definidas en el estándar como `iss`, `sub` o `exp`. Estas claves pueden ser útiles al crear un JWT, pero son opcionales. Consulte la página de [Wikipedia](https://en.wikipedia.org/wiki/JSON_Web_Token) para obtener una lista completa de los campos estándar de un JWT.
@@ -26,7 +26,7 @@ En nuestro ejemplo, el servidor de autenticación creará un JWT con dos valores
 | `jti` | Token de autenticación emitido para la aplicación. En adelante, todas las solicitudes enviadas al API deben contener este valor en la cabecera de autenticación. Más adelante lo veremos con detalle |
 | `exp` | Fecha vencimiento del token de autenticación. Se trata del número de segundos transcurridos desde la medianoche UTC del 1 de enero de 1970 (00:00). Es el valor conocido universalmente como [tiempo Unix](https://es.wikipedia.org/wiki/Tiempo_Unix) |
 
-## Creación de la firma
+## Creación de la firma (signature)
 
 La firma se calcula utilizando el pseudo-código:
 
@@ -34,7 +34,7 @@ La firma se calcula utilizando el pseudo-código:
 data = base64urlEncode (header) + "." + base64urlEncode (payload)
 signature = Hash (data, appSecret)
 ```
-Lo que hace este algoritmo es codificar en base64url el encabezado y la carga (Payload) creada en los pasos anteriores. El algoritmo luego concatena las cadenas codificadas resultantes con un punto (.) En el pseudo-código, esta cadena unida se asigna a "data". Para obtener la firma del JWT, se obtiene el Hash de la cadena en "data" utilizando la clave secreta y el algoritmo hash especificado en el encabezado del JWT.
+Lo que hace este algoritmo es codificar en [base64url](https://en.wikipedia.org/wiki/Base64#RFC_4648) el encabezado y la carga (Payload) creada en los pasos anteriores. El algoritmo luego concatena las cadenas codificadas resultantes con un punto (.) En el pseudo-código, esta cadena unida se asigna a "data". Para obtener la firma del JWT, se obtiene el Hash de la cadena en "data" utilizando la clave secreta y el algoritmo hash especificado en el encabezado del JWT.
 
 En este ejemplo, tanto el encabezado como la carga son codificados en base64url así:
 
