@@ -1,4 +1,4 @@
-# ¿Cómo solicitar un token de autenticación?
+# Solicitar un token de autenticación
 
 ## Conceptos generales
 
