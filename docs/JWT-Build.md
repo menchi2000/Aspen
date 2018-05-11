@@ -1,6 +1,6 @@
 # Pasos para crear un JWT 
 
-## Creación del encabezado (haeder)
+## Creación del encabezado (header)
 
 El encabezado es un objeto JSON en el siguiente formato. Su información se utilizará más adelante para determinar cómo calcular la firma del JWT.
 
