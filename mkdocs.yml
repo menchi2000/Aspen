@@ -5,6 +5,7 @@ repo_url: https://github.com/RD-Processa/Aspen
 pages:
 - Introducción: index.md
 - Registro de aplicaciones: App_Register.md
+- Asegurar una clave API: Securing_AppKey.md
 - Identificación de aplicaciones: App_Setup.md
 - Pasos para crear un JWT : JWT-Build.md
 - Solicitar un token de autenticación: JWT-Request.md
