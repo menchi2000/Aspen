@@ -26,115 +26,117 @@ Por ejemplo, si el cliente recibe un código de `StatusCode` 431, puede asumir c
 
 Key | Value
 --- | -----
-| **X\-PRO\-Response\-Help** | Contiene la Url donde se describe la razón por la que no se pudo procesar una solicitud. Se incluye en la respuesta para cualquier solicitud con un status diferente a 2xx.
-| **X\-PRO\-Response\-Time** | Contiene una cadena en formato minutos:segundos:milisegundos (mm:ss:fff) con el tiempo que tomó procesar la solicitud. Por supuesto, no se incluye el tiempo de latencia.
+**X&#x2011;PRO&#x2011;Response&#x2011;Help** | Contiene la Url donde se describe la razón por la que no se pudo procesar una solicitud. Se incluye en la respuesta para cualquier solicitud con un status diferente a 2xx.
+**X&#x2011;PRO&#x2011;Response&#x2011;Time** | Contiene una cadena en formato minutos:segundos:milisegundos (mm:ss:fff) con el tiempo que tomó procesar la solicitud. No se incluye el tiempo de latencia.
 
 ## Mensaje de repuesta comunes
 
 [Un código de respuesta HTTP](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) es generado por **Aspen** en respuesta a una solicitud del cliente hecha al servidor.
 
+Una respuesta en el grupo 2xx indica el procesamiento satisfactorio de la solicitud. Una respuesta en el grupo 4xx indica que los parámetros proporcionados para completar la operación no son válidos o están incompletos. Para estos casos, revise el mensaje en `ReasonPhrase`. Le ayudará a comprender el porqué de la situación.
+
 ## Identificadores en mensajes de respuesta
 
-La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener alguno de los valores mencionados en el siguiente sección. `ReasonPhrase` puede darle pistas del porque **Aspen** está generando esa respuesta.
+La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener alguno de los valores mencionados en el siguiente sección. Nuevamente el analisis del mensaje en `ReasonPhrase` le ayudará a comprender el porqué de la situación.
 
 ## AppKeyDoesNotExist
 
 - StatusCode: 400
-- ReasonPhrase: Necesita utilizar el identificador de aplicación `AppKey` suministrado.
+- Reason: Necesita utilizar el identificador de aplicación `AppKey` suministrado.
 - EventId: 20005
 
 ## AppKeyIsDisabled
 
 - StatusCode: 403
-- ReasonPhrase: El identificador de aplicación `AppKey` suministrado no está habilitado en el sistema.
+- Reason: El identificador de aplicación `AppKey` suministrado no está habilitado en el sistema.
 - EventId: 20006
 
 ## BadGateway
 
 - StatusCode: 502
-- ReasonPhrase: **Aspen** no ha podido redirigir la solicitud al sistema responsable de procesarla. Pónganse en contacto con nuestro equipo de monitoreo.
+- Reason: **Aspen** no ha podido redirigir la solicitud al sistema responsable de procesarla. Pónganse en contacto con nuestro equipo de monitoreo.
 - EventId: 15859
 
 ## BadRequest
 
 - StatusCode: 400
-- ReasonPhrase: La solicitud no pudo ser procesada por el servidor. Los datos enviados por el cliente no son válidos. El campo `ReasonPhrase` contiene un mensaje que describe de forma detallada los datos que no pudieron ser procesados.
+- Reason: La solicitud no pudo ser procesada por el servidor. Los datos enviados por el cliente no son válidos. El campo `ReasonPhrase` contiene un mensaje que describe de forma detallada los datos que no pudieron ser procesados.
 - EventId: 20005
 
 ## DecodeAuthHeaderFailed
 
 - StatusCode: 400
-- ReasonPhrase: La información suministrada en el Payload de la cabecera de autenticación `X-PRO-Auth-Payload` no es válida. Asegúrese de utilizar los valores de `AppKey` y `AppSecret` proporcionados
+- Reason: La información suministrada en el Payload de la cabecera de autenticación `X-PRO-Auth-Payload` no es válida. Asegúrese de utilizar los valores de `AppKey` y `AppSecret` proporcionados
 - EventId: 20005
 
 ## EpochNotSatisfiable
 
 - StatusCode: 416
-- ReasonPhrase: El valor de `Epoch` en la solicitud está muy adelante en el futuro o muy atrás en el pasado. **Aspen** permite un 'desfase' de hasta 12 horas en este campo. Corrija el valor y vuelva a intentar.
+- Reason: El valor de `Epoch` en la solicitud está muy adelante en el futuro o muy atrás en el pasado. **Aspen** permite un 'desfase' de hasta 12 horas en este campo. Corrija el valor y vuelva a intentar.
 - EventId: 15851
 
 ## ForbiddenScope
 
 - StatusCode: 403
-- ReasonPhrase: Su AppKey ha sido deshabilitado o no tiene permisos para llevar a cabo la operación. Pónganse en contacto con nuestro equipo comercial.
+- Reason: Su AppKey ha sido deshabilitado o no tiene permisos para llevar a cabo la operación. Pónganse en contacto con nuestro equipo comercial.
 - EventId: 1000478
 
 ## GatewayTimeout
 
 - StatusCode: 504
-- ReasonPhrase: **Aspen** no ha podido redirigir la solicitud al sistema responsable de procesarla. Pónganse en contacto con nuestro equipo de monitoreo.
+- Reason: **Aspen** no ha podido redirigir la solicitud al sistema responsable de procesarla. Pónganse en contacto con nuestro equipo de monitoreo.
 - EventId: 15859
 
 ## InternalServerError
 
 - StatusCode: 500
-- ReasonPhrase: Algo ha salido mal en el servidor, pero no podemos ser más específicos sobre cuál es el problema exacto. Pónganse en contacto con nuestro equipo de monitoreo.
+- Reason: Algo ha fallado en el servidor, pero no podemos ser más específicos sobre cuál es el problema exacto. Pónganse en contacto con nuestro equipo de monitoreo.
 - EventId: 15841
 
 ## ItemAlreadyExist
 
 - StatusCode: 409
-- ReasonPhrase: Se está intentado procesar un elemento que ya existe en el sistema. El campo `ReasonPhrase` contiene un mensaje que describe el elemento.
+- Reason: Se está intentado procesar un elemento que ya existe en el sistema. El campo `ReasonPhrase` contiene un mensaje que describe el elemento.
 - EventId: Dependiente del elemento.
 
 ## ItemNotFound
 
 - StatusCode: 404
-- ReasonPhrase: Ninguno.
+- Reason: Ninguno.
 - EventId: Ninguno.
 
 ## MalformedVersion
 
 - StatusCode: 400
-- ReasonPhrase: La cabecera personalizada en la solicitud `X-PRO-Auth-Version` contiene un valor no soportado.
+- Reason: La cabecera personalizada en la solicitud `X-PRO-Auth-Version` contiene un valor no soportado.
 - EventId: 945410.
 
 ## MissingCustomHeader
 
 - StatusCode: 400
-- ReasonPhrase: Falta alguna de las cabeceras de autenticación. El campo `ReasonPhrase` contiene un mensaje que describe la cabecera faltante.
+- Reason: Falta alguna de las cabeceras de autenticación. El campo `ReasonPhrase` contiene un mensaje que describe la cabecera faltante.
 - EventId: 20002.
 
 ## NonceAlreadyProcessed
 
 - StatusCode: 409
-- ReasonPhrase: Está intentando procesar el valor de un `Nonce` que ya fue procesado. Recuerde que cada solicitud debe llevar un identificador univoco. Cambie el valor de `Nonce` por uno que no se haya procesado y vuelva a intentar.
+- Reason: Está intentando procesar el valor de un `Nonce` que ya fue procesado. Recuerde que cada solicitud debe llevar un identificador univoco. Cambie el valor de `Nonce` por uno que no se haya procesado y vuelva a intentar.
 - EventId: 978410.
 
 ## TokenExpired
 
 - StatusCode: 401
-- ReasonPhrase: El valor del token suministrado para el proceso de autenticación ya expiro. Debe generar uno nuevo.
+- Reason: El valor del token suministrado para el proceso de autenticación ya expiro. Debe generar uno nuevo.
 - EventId: 15847.
 
 ## Unauthorized
 
 - StatusCode: 401
-- ReasonPhrase: El proveedor de autenticación del sistema no pudo procesar la solicitud.  El campo `ReasonPhrase` contiene un mensaje que describe el error que encontró.
+- Reason: El proveedor de autenticación del sistema no pudo procesar la solicitud.  El campo `ReasonPhrase` contiene un mensaje que describe el error que encontró.
 - EventId: 10746.
 
 ## UnsupportedRequestedVersion
 
 - StatusCode: 400
-- ReasonPhrase: La cabecera personalizada en la solicitud `X-PRO-Auth-Version` contiene un valor no soportado.
+- Reason: La cabecera personalizada en la solicitud `X-PRO-Auth-Version` contiene un valor no soportado.
 - EventId: 20008.
