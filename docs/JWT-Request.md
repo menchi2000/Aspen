@@ -81,6 +81,11 @@ var jwt = encoder.Encode(payload, appSecret);
 
 El servicio de autenticación requiere una [solicitud HTTP con dos cabeceras personalizadas](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html), como se muestra en el siguiente pseudo-código:
 
+Key | Value
+--- | -----
+**X&#x2011;PRO&#x2011;Auth&#x2011;App** | Valor generado en la sección [Registro de aplicaciones](App_Register.md).
+**X&#x2011;PRO&#x2011;Auth&#x2011;Payload** | Token JWT que incluye las claves Nonce, Epoch en la [carga/payload](JWT-Build.md).
+
 ```AsciiDoc
 appKey = Valor generado en la sección Registro de aplicaciones
 jwt = Token JWT que incluye las claves Nonce, Epoch en la carga/payload
