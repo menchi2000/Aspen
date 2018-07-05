@@ -3,10 +3,10 @@ theme: readthedocs
 repo_url: https://github.com/RD-Processa/Aspen
 
 pages:
-- Introducci?n: index.md
+- Introducción: index.md
 - Registro de aplicaciones: App_Register.md
 - Asegurar una clave API: Securing_AppKey.md
 - Identificación de aplicaciones: App_Setup.md
 - Pasos para crear un JWT : JWT-Build.md
-- Solicitar un token de autenticaci?n: JWT-Request.md
+- Solicitar un token de autenticación: JWT-Request.md
 - Mensajes de respuesta: Responses.md
