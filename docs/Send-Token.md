@@ -27,7 +27,11 @@ public interface IAspenService
 ```
 
 Y finalmente agreguemos la operación en la clase `AspenService`.
-> Observe que estamos enviando en el Payload el valor del Token.
+
+<div class="admonition warning">
+   <p class="first admonition-title">Payload/Token</p>
+   <p class="last">Observe que estamos enviando en el Payload el valor del Token.</p>
+</div>
 
 ```csharp
 public IList<DocType> GetDocTypes()
