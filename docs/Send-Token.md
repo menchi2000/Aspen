@@ -26,7 +26,7 @@ public interface IAspenService
 }
 ```
 
-Y ahora agreguemos la operación en la clase `AspenService`, así:
+Y finalmente agreguemos la operación en la clase `AspenService`:
 
 ```csharp
 public IList<DocType> GetDocTypes()
@@ -57,3 +57,11 @@ public IList<DocType> GetDocTypes()
 ```
 
 Eso es todo. Repita esto cada vez que necesite invocar una operación en el servicio.
+
+```csharp
+IAspenService client = new AspenService(new HardCodedCredentials());
+client.Signin();
+IList<DocType> docTypes = client.GetDocTypes();
+```
+
+<script src="https://gist.github.com/RD-Processa/fea28b6d790fbb06461fa542af24d3b6.js"></script>

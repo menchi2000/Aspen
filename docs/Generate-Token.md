@@ -230,7 +230,7 @@ public class AspenException : HttpException
         this.StatusCode = response.StatusCode;
         this.StatusDescription = response.StatusDescription;
         this.helpLink = this.GetResponseHeader(response, "X-PRO-Response-Help");
-        this.Data["RequestedUri"] = response.ResponseUri.ToString();
+        this.Data["Uri"] = response.ResponseUri.ToString();
 
         var responseTime = this.GetResponseHeader(response, "X-PRO-Response-Time");
         if (!string.IsNullOrWhiteSpace(responseTime))
