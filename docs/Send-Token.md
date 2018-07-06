@@ -26,7 +26,8 @@ public interface IAspenService
 }
 ```
 
-Y finalmente agreguemos la operación en la clase `AspenService`:
+Y finalmente agreguemos la operación en la clase `AspenService`.
+> Observe que estamos enviando en el Payload el valor del Token.
 
 ```csharp
 public IList<DocType> GetDocTypes()
@@ -63,5 +64,7 @@ IAspenService client = new AspenService(new HardCodedCredentials());
 client.Signin();
 IList<DocType> docTypes = client.GetDocTypes();
 ```
+
+## Código de demostración completo
 
 <script src="https://gist.github.com/RD-Processa/fea28b6d790fbb06461fa542af24d3b6.js"></script>
