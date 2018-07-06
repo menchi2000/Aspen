@@ -9,4 +9,5 @@ pages:
 - Identificación de aplicaciones: App_Setup.md
 - Pasos para crear un JWT : JWT-Build.md
 - Solicitar un token de autenticación: JWT-Request.md
+- Generar un token de autenticación: Generate-Token.md
 - Mensajes de respuesta: Responses.md
