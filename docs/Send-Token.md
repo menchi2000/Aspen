@@ -1,7 +1,10 @@
 # Enviar un token de autenticación
 
 Ahora que tiene un token de autenticación debe enviarlo al invocar cualquier operación en **Aspen**. Lo único que debe hacer es agregarlo al Payload de la solicitud. Así de simple.
+
 Veamos un ejemplo:
+
+Creemos una operación para consultar los tipos de identificación registrados en **Aspen**
 
 Primero creemos una clase que represente la información de un Tipo de identificación en el sistema:
 
