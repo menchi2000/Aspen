@@ -12,7 +12,7 @@ Para solicitar el registro de una aplicación debe comunicarse con el área come
 | Nombre        | Descripción |
 | ------------- |-------------
 | `appKey`      | Identificador univoco de su aplicación |
-| `appSecret`   | Valor a utilizar en la [generación del JSON Web Token](JWT.md) |
+| `appSecret`   | Valor a utilizar en la [generación del JSON Web Token](/JWT.md) |
 
 Ejemplo de un valor `appKey`
 
