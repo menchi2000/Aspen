@@ -6,7 +6,7 @@ Veamos un ejemplo:
 
 Creemos una operación para consultar los tipos de identificación registrados en **Aspen**
 
-Primero creemos una clase que represente la información de un Tipo de identificación en el sistema:
+Primero, definamos una clase que represente la información de un Tipo de identificación en el sistema:
 
 ```csharp
 public class DocType
@@ -18,7 +18,7 @@ public class DocType
 }
 ```
 
-Agreguemos a las operaciones del servicio una para obtener la lista de tipos de documento del sistema.
+Ahora, agreguemos una operación a la definición del servicio que represente la operación  para obtener la lista de tipos de documento del sistema `GetDocTypes`.
 
 ```csharp
 public interface IAspenService
@@ -29,7 +29,7 @@ public interface IAspenService
 }
 ```
 
-Y finalmente agreguemos la operación en la clase `AspenService`.
+Y, finalmente agreguemos la operación en la clase `AspenService`.
 
 <div class="admonition warning">
    <p class="first admonition-title">Payload/Token</p>
