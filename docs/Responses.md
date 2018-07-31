@@ -120,7 +120,7 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 ## NonceAlreadyProcessed
 
 - StatusCode: 409
-- Reason: Está intentando procesar el valor de un `Nonce` que ya fue procesado. Recuerde que cada solicitud debe llevar un identificador univoco. Cambie el valor de `Nonce` por uno que no se haya procesado y vuelva a intentar.
+- Reason: Está intentando procesar el valor de un `Nonce` que ya fue procesado. Recuerde que cada solicitud debe llevar un identificador unívoco. Cambie el valor de `Nonce` por uno que no se haya procesado y vuelva a intentar.
 - EventId: 978410.
 
 ## TokenExpired

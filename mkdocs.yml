@@ -11,4 +11,7 @@ pages:
 - Solicitar un token de autenticación: JWT-Request.md
 - Generar un token de autenticación: Generate-Token.md
 - Enviar un token de autenticación: Send-Token.md
+- Tokenización de pagos: Tokenization.md
+- Generación de un token de pago: Generate-PaymentToken.md
+- Validación de un token de pago: Redeem-PaymentToken.md
 - Mensajes de respuesta: Responses.md
