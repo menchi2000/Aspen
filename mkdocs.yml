@@ -12,6 +12,7 @@ pages:
 - Generar un token de autenticación: Generate-Token.md
 - Enviar un token de autenticación: Send-Token.md
 - Tokenización de pagos: Tokenization.md
+- Canales para tokens de pago: Get-Channels.md
 - Generación de un token de pago: Generate-PaymentToken.md
 - Validación de un token de pago: Redeem-PaymentToken.md
 - Mensajes de respuesta: Responses.md
