@@ -135,6 +135,11 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 - Reason: El proveedor de autenticación del sistema no pudo procesar la solicitud.  El campo `ReasonPhrase` contiene un mensaje que describe el error que encontró.
 - EventId: 10746.
 
+## PinNumberNotAcceptable
+- StatusCode: 406
+- Reason: El Formato del PIN que se intenta establecer no cumple con alguna de las políticas..
+- EventId: 15860.
+
 ## UnsupportedRequestedVersion
 
 - StatusCode: 400
