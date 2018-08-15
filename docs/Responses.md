@@ -137,7 +137,7 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 
 ## PinNumberNotAcceptable
 - StatusCode: 406
-- Reason: El Formato del PIN que se intenta establecer no cumple con alguna de las políticas..
+- Reason: El Formato del PIN que se intenta establecer no cumple con alguna de las políticas. El campo `ReasonPhrase` contiene un mensaje que describe el error que encontró.
 - EventId: 15860.
 
 ## UnsupportedRequestedVersion
