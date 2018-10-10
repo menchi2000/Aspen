@@ -145,3 +145,9 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 - StatusCode: 400
 - Reason: La cabecera personalizada en la solicitud `X-PRO-Auth-Version` contiene un valor no soportado.
 - EventId: 20008.
+
+## UpgradeRequired
+
+- StatusCode: 426
+- Reason: Se requiere la actualizaión del secreto o clave de la aplicación que se utiliza para firmar las solicitudes.
+- EventId: 20009.
