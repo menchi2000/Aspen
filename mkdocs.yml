@@ -11,6 +11,7 @@ pages:
 - Solicitar un token de autenticación: JWT-Request.md
 - Generar un token de autenticación: Generate-Token.md
 - Enviar un token de autenticación: Send-Token.md
+- Cambiar el secreto de una aplicación: Update-AppSecret.md
 - Tokenización de pagos: Tokenization.md
 - Canales para tokens de pago: Get-Channels.md
 - Generación de un token de pago: Generate-PaymentToken.md
