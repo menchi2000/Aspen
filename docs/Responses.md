@@ -149,5 +149,5 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 ## UpgradeRequired
 
 - StatusCode: 426
-- Reason: Se requiere la actualizaión del secreto o clave de la aplicación que se utiliza para firmar las solicitudes.
+- Reason: Se requiere la actualización del secreto o clave de la aplicación que se utiliza para firmar las solicitudes.
 - EventId: 20009.
