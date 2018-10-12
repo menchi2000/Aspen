@@ -11,7 +11,7 @@ El primer dígito en `StatusCode` define la clase de respuesta. Los últimos dos
 
 Grupo | Descripción | Acción necesaria
 :---: | ----------- | -------------
-2xx | Éxito | La acción se recibió y se procesó de forma exitosa. No se requiere ninguna acción adicional.
+2xx | OK | La acción se recibió y se procesó de forma exitosa. No se requiere ninguna acción adicional.
 3xx | Redirección |  Se deben tomar medidas adicionales para completar la solicitud. El recurso (Url) solicitado se ha movido a otro lugar. Se debe redirigir la solicitud a la nueva Url.
 4xx | Error de cliente | La solicitud contiene datos inválidos o faltan datos. Los datos enviados por el cliente no permiten procesar la solicitud. Se deben corregir los datos de la solicitud y volver a intentar.
 5xx | Error de servidor | El servidor no pudo procesar la solicitud. Se requieren correcciones del lado del servidor.
