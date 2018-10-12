@@ -8,7 +8,7 @@ Tendrá que invocar a la operación `Secret` del servicio de autenticación, hac
 
 ### Implementación demostrativa
 
-Usando el [código de demostración](samples/docs/Demo.cs) agregaremos a la interfaz `IAspenService` una nueva función con el nombre `UpdateSecret`
+Usando el [código de demostración](samples/Demo.cs) agregaremos a la interfaz `IAspenService` una nueva función con el nombre `UpdateSecret`
 
 ```c#
 public interface IAspenService
@@ -45,18 +45,21 @@ public void UpdateSecret(string newSecret)
 }
 ```
 
-Una vez que el cambio de secreto haya finalizado con éxito, toda nueva solicitud firmada usando las credenciales anteriores, automáticamente será rechazada.
+<div class="admonition warning">
+   <p class="first admonition-title">Atención</p>
+   <p class="last">Una vez que el cambio de secreto haya finalizado con éxito, toda nueva solicitud firmada usando las credenciales anteriores, automáticamente será rechazada.</p>
+</div>
  
 ### Características de un secreto fuerte
 El secreto debe cumplir con un alto nivel de complejidad para que sea poco o nada predecible y mitigar ataques de fuerza bruta.
 
 Prepare nuevos secretos para su aplicación que incluyan las siguientes características:
 
-* :abc: Letras minúsculas.
-* :ab: Letras mayúsculas.
-* :1234: Números.
-* :interrobang: Caracteres especiales.
-* :arrow_right: Una longitud mínima 128 caracteres.
+* Letras minúsculas.
+* Letras mayúsculas.
+* Números.
+* Caracteres especiales.
+* Una longitud mínima 128 caracteres.
 
 ```c#
 // Una forma sencilla de generar claves fuertes con .NET:
