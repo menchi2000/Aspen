@@ -1,14 +1,14 @@
-# Cambiar el secreto de una aplicación
+# Cambiar el secreto de una aplicaciÃ³n
 
-**Aspen** permite al propietario de una aplicación, cambiar o actualizar el secreto para firmar las solicitudes.
+**Aspen** permite al propietario de una aplicaciÃ³n, cambiar o actualizar el secreto para firmar las solicitudes.
 
-Cambiar el secreto de su aplicación al igual que en la [solicitud de un token de autenticación](JWT-Request.md) necesitará de las cabeceras de autenticación personalizadas junto con un parámetro que recibe el valor para el nuevo secreto.
+Cambiar el secreto de su aplicaciÃ³n al igual que en la [solicitud de un token de autenticaciÃ³n](JWT-Request.md) necesitarÃ¡ de las cabeceras de autenticaciÃ³n personalizadas junto con un parÃ¡metro que recibe el valor para el nuevo secreto.
 
-Tendrá que invocar a la operación `Secret` del servicio de autenticación, a través de una operación `POST` agregando las dos [cabeceras personalizadas](JWT-Request.md#cabeceras-de-autenticacion-requeridas) usando su `AppKey` y `AppSecret` actual.
+TendrÃ¡ que invocar a la operaciÃ³n `Secret` del servicio de autenticaciÃ³n, haciendo un `POST` y agregando las dos [cabeceras personalizadas](JWT-Request.md#cabeceras-de-autenticacion-requeridas) usando su `AppKey` y `AppSecret` actual.
 
-### Implementación demostrativa
+### ImplementaciÃ³n demostrativa
 
-Usando el [código de demostración](samples/docs/Demo.cs) agregaremos a la interfaz `IAspenService` una nueva función con el nombre `UpdateSecret`.
+Usando el [cÃ³digo de demostraciÃ³n](samples/docs/Demo.cs) agregaremos a la interfaz `IAspenService` una nueva funciÃ³n con el nombre `UpdateSecret`
 
 ```c#
 public interface IAspenService
@@ -20,7 +20,7 @@ public interface IAspenService
 }
 ```
 
-Y en la clase `AspenService` implementaremos la nueva función:
+Y en la clase `AspenService` implementaremos la nueva funciÃ³n:
 
 ```c#
 public void UpdateSecret(string newSecret)
@@ -45,22 +45,24 @@ public void UpdateSecret(string newSecret)
 }
 ```
 
-Una vez que el cambio de secreto haya finalizado con éxito, toda nueva solicitud firmada usando las credenciales anteriores, automáticamente será rechazada.
+Una vez que el cambio de secreto haya finalizado con Ã©xito, toda nueva solicitud firmada usando las credenciales anteriores, automÃ¡ticamente serÃ¡ rechazada.
  
-### Características de un secreto fuerte
+### CaracterÃ­sticas de un secreto fuerte
 El secreto debe cumplir con un alto nivel de complejidad para que sea poco o nada predecible y mitigar ataques de fuerza bruta.
 
-Prepare nuevos secretos para su aplicación que incluyan las siguientes características:
+Prepare nuevos secretos para su aplicaciÃ³n que incluyan las siguientes caracterÃ­sticas:
 
-* :abc: Letras minúsculas.
-* :ab: Letras mayúsculas.
-* :1234: Números.
+* :abc: Letras minÃºsculas.
+* :ab: Letras mayÃºsculas.
+* :1234: NÃºmeros.
 * :interrobang: Caracteres especiales.
-* :arrow_right: Longitud entre 128 y 214 caracteres.
+* :arrow_right: Una longitud mÃ­nima 128 caracteres.
 
 ```c#
 // Una forma sencilla de generar claves fuertes con .NET:
-System.Web.Security.Membership.GeneratePassword(128, 0);
+int minLength = 128;
+int numberOfNonAlphanumericCharacters = 10;
+System.Web.Security.Membership.GeneratePassword(minLength, numberOfNonAlphanumericCharacters);
 ```
 
-Una herramienta en línea para generar claves seguras: [Strong Random Password Generator](https://passwordsgenerator.net/)
+O puede utilizar una herramienta en lÃ­nea para generar claves seguras como esta: [Strong Random Password Generator](https://passwordsgenerator.net/)
