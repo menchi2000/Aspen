@@ -20,11 +20,11 @@ Un token posee al menos los siguientes atributos:
 
 ### Paso a paso
 
-- Paso 1: Se genera un token a partir de una número de cuenta para un uso único dentro de un dominio específico (en adelante canal), como por ejemplo, para un retiro en un cajero automático, para el pago de un artículo o como un factor adicional de autenticación, por mencionar solo algunos de sus posibles usos.
+- Paso 1: Se genera un token a partir de un número de cuenta para un uso único dentro de un dominio específico (en adelante canal), como por ejemplo, para un retiro en un cajero automático, para el pago de un artículo o como un factor adicional de autenticación, por mencionar solo algunos de sus posibles usos.
 
 - Paso 2: El token se almacena en una bóveda de tokens, un entorno compatible con [PCI DSS](https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard) y se relaciona con el usuario que solicitó su generación.
 
-- Paso 3: El token se muestra al usuario en el dispositivo móvil desde donde solicitó su generación.
+- Paso 3: El token se muestra o entrega al usuario a través de un dispositivo, mensaje de texto o desde donde solicitó su generación.
 
 - Paso 4: El usuario “presenta el token en el canal” utilizándolo en reemplazo de su número de tarjeta.
 
