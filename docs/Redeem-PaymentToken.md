@@ -1,8 +1,8 @@
 # Validación de un token de pago
 
-Permite a un adquirente o comercio, verificar la validez de un token de pago que fue generado a través de la aplicación de movilidad del emisor.
+Permite a un adquirente o comercio, verificar la validez de un token transaccional que fue generado a través de la aplicación registrada por el emisor.
 
-> Cuando la validación es exitosa, se hace un débito en la cuenta asociada con el token de pago.
+> Cuando la validación es exitosa, se hace un débito en la cuenta asociada con el token transaccional.
 
 Verbo | Endpoint | Requiere autenticación
 :---: | -------- | :------------:
@@ -44,8 +44,8 @@ HttpStatus | Tipo de dato | Descripción
 
 - [Tokenización: Concepto general](Tokenization.md)
 
-- [Canales para tokens de pago](Get-Channels.md)
+- [Canales para tokens transaccionales](Get-Channels.md)
 
-- [Generación de un token de pago](Generate-PaymentToken.md)
+- [Generación de un token transaccional](Generate-PaymentToken.md)
 
 - [Proveedor de servicios de tokens (TSP)](Tokenization.md#tps)
