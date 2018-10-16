@@ -1,6 +1,6 @@
-# Generación de un token de pago
+# Generación de un token transaccional
 
-Permite al usuario genera un token para un canal, a través de la aplicación de movilidad del emisor.
+Permite al usuario genera un token para un canal, a través del consumo de esta operación desde la aplicación registrada por el emisor.
 
 > Esta operación es irrelevante para los comercios adquirientes, pero se describe aquí para facilitar la comprensión general del proceso.
 
@@ -28,7 +28,7 @@ ChannelKey | string | Cadena que identifica de manera unívoca [el canal](Get-Ch
 DocType | string | Tipo de documento del usuario para el que se genera el token | [x]
 DocNumber | string | Número de documento del usuario para el que se genera el token | [x]
 Metadata | string | Metadatos asociados personalizados para el [TPS](Tokenization.md#tps) | [x]
-PinNumber | string | Pin asociado con el usuario para la generación del token | [x]
+PinNumber | string | Pin asociado con el usuario para la generación del token | [x] (Opcional)
 
 ## Datos de la respuesta
 
@@ -54,8 +54,8 @@ ChannelName | string | Nombre descriptivo del canal para el que se generó el to
 
 - [Tokenización: Concepto general](Tokenization.md)
 
-- [Canales para tokens de pago](Get-Channels.md)
+- [Canales para tokens transaccional](Get-Channels.md)
 
 - [Proveedor de servicios de tokens (TSP)](Tokenization.md#tps)
 
-- [Validación de un token de pago](Redeem-PaymentToken.md)
+- [Validación de un token transaccional](Redeem-PaymentToken.md)
