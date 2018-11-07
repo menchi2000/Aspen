@@ -109,7 +109,7 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 
 - StatusCode: 400
 - Reason: La cabecera personalizada en la solicitud `X-PRO-Auth-Version` contiene un valor no soportado.
-- EventId: 945410.
+- EventId: 99001.
 
 ## MissingCustomHeader
 
@@ -121,7 +121,7 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 
 - StatusCode: 409
 - Reason: Está intentando procesar el valor de un `Nonce` que ya fue procesado. Recuerde que cada solicitud debe llevar un identificador unívoco. Cambie el valor de `Nonce` por uno que no se haya procesado y vuelva a intentar.
-- EventId: 978410.
+- EventId: 99003.
 
 ## TokenExpired
 
@@ -144,7 +144,7 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 
 - StatusCode: 400
 - Reason: La cabecera personalizada en la solicitud `X-PRO-Auth-Version` contiene un valor no soportado.
-- EventId: 20008.
+- EventId: 99005.
 
 ## UpgradeSecretRequired
 
