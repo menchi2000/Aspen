@@ -45,6 +45,6 @@ El usuario `U`, ingresa a la aplicación (una aplicación para dispositivos móv
 
 ## Información relacionada
 
-- [Generación de un token de pago](Generate-PaymentToken.md)
+- [Generación de un token transaccional](Generate-PaymentToken.md)
 
-- [Validación de un token de pago](Redeem-PaymentToken.md)
+- [Validación de un token transaccional](Redeem-PaymentToken.md)
