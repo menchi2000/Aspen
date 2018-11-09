@@ -13,26 +13,25 @@ Un `token de pago` está compuesto por números aleatorios, reemplazando los dat
 Un token posee al menos los siguientes atributos:
 
 - Está asociado con un usuario.
-- Está asociado con un canal.
 - Está asociado con un medio de pago (tarjeta/plástico).
 - Tiene una fecha de vigencia.
 - Solo se puede utilizar una vez (OTP).
 
 ### Paso a paso
 
-- Paso 1: Se genera un token a partir de un número de cuenta para un uso único dentro de un dominio específico (en adelante canal), como por ejemplo, para un retiro en un cajero automático, para el pago de un artículo o como un factor adicional de autenticación, por mencionar solo algunos de sus posibles usos.
+- Paso 1: Se genera un token a partir de un número de cuenta para un uso único, como por ejemplo, para un retiro en un cajero automático, para el pago de un artículo o como un factor adicional de autenticación, por mencionar solo algunos de sus posibles usos.
 
 - Paso 2: El token se almacena en una bóveda de tokens, un entorno compatible con [PCI DSS](https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard) y se relaciona con el usuario que solicitó su generación.
 
 - Paso 3: El token se muestra o entrega al usuario a través de un dispositivo, mensaje de texto o desde donde solicitó su generación.
 
-- Paso 4: El usuario “presenta el token en el canal” utilizándolo en reemplazo de su número de tarjeta.
+- Paso 4: El usuario "presenta el token" en el comercio, utilizándolo en reemplazo de su número de tarjeta.
 
-- Paso 5: “El canal”, envía el token al emisor a través de la red de pago.
+- Paso 5: El comercio envía el token al emisor a través de la red de pago.
 
 - Paso 6: El emisor valida el token y, si coincide, aprueba la transacción.
 
-- Paso 7: La respuesta del emisor se devuelve al “canal” solicitante utilizando el token como referencia de la tarjeta.
+- Paso 7: La respuesta del emisor se devuelve al comercio solicitante utilizando el token como referencia de la tarjeta.
 
 ## Cómo puedo utilizar la funcionalidad de tokens
 
@@ -40,14 +39,11 @@ Un token posee al menos los siguientes atributos:
 
 Para usar la tokenización, un emisor o comerciante debe convertirse en un _**proveedor de servicios de tokens (TSP)**_.
 
-
 ### Ejemplo
 
-El usuario `U`, ingresa a la aplicación de movilidad del emisor (utilizando sus credenciales) y genera un token para efectuar una compra en el comercio `C`. La aplicación del emisor, solicita a `U` que ingrese el PIN transaccional, necesario para generar el token [2FA](https://en.wikipedia.org/wiki/Multi-factor_authentication). La aplicación solicita a **Aspen** la generación del token el cual queda almacenado de forma segura en una bóveda electrónica. La aplicación muestra el token a `U`. `U` se dirige a `C` y en el punto de pago menciona token como medio de pago. `C` solicita al usuario su número de identificación y token y envía esta información al emisor. El emisor verifica esta información contra la contenida en la bóveda y si coincide y se encuentra vigente, emite la autorización.
+El usuario `U`, ingresa a la aplicación (una aplicación para dispositivos móviles, un portal transaccional, un IVR, etc.) del emisor utilizando sus credenciales y genera un token para efectuar una compra en el comercio `C`. La aplicación del emisor, solicita a `U` que ingrese el PIN transaccional, necesario para generar el token [2FA](https://en.wikipedia.org/wiki/Multi-factor_authentication). La aplicación solicita a **Aspen** la generación del token el cual queda almacenado de forma segura en una bóveda electrónica. La aplicación muestra el token a `U`. `U` se dirige a `C` y en el punto de pago menciona token como medio de pago. `C` solicita al usuario su número de identificación y token y envía esta información al emisor. El emisor verifica esta información contra la contenida en la bóveda y si coincide y se encuentra vigente, emite la autorización. 
 
 ## Información relacionada
-
-- [Canales para tokens de pago](Get-Channels.md)
 
 - [Generación de un token de pago](Generate-PaymentToken.md)
 
