@@ -42,7 +42,7 @@ PinNumber | string | Pin asociado con el usuario para la generación del token |
 Campo | Tipo de dato | Descripción
 :---: | :--------: | ------------
 Token | string | Valor que representa el token de pago.
-ExpirationMinutes | Duración en minutos del token transaccional.
+ExpirationMinutes | int | Duración en minutos del token transaccional.
 ExpiresAt | datetime | Fecha y hora en formato [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) en la que expira la validez del token.
 
 ## Información relacionada
