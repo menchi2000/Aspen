@@ -13,7 +13,6 @@ pages:
 - Enviar un token de autenticación: Send-Token.md
 - Cambiar el secreto de una aplicación: Update-AppSecret.md
 - Tokenización de pagos: Tokenization.md
-- Canales para tokens de pago: Get-Channels.md
-- Generación de un token de pago: Generate-PaymentToken.md
-- Validación de un token de pago: Redeem-PaymentToken.md
+- Generación de un token transaccional: Generate-PaymentToken.md
+- Validación de un token transaccional: Redeem-PaymentToken.md
 - Mensajes de respuesta: Responses.md
