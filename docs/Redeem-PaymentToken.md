@@ -44,8 +44,6 @@ HttpStatus | Tipo de dato | Descripción
 
 - [Tokenización: Concepto general](Tokenization.md)
 
-- [Canales para tokens de pago](Get-Channels.md)
-
-- [Generación de un token de pago](Generate-PaymentToken.md)
+- [Generación de un token transaccional](Generate-PaymentToken.md)
 
 - [Proveedor de servicios de tokens (TSP)](Tokenization.md#tps)
