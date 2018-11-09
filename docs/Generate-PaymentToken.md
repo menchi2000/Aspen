@@ -51,4 +51,4 @@ ExpiresAt | datetime | Fecha y hora en formato [UTC](https://en.wikipedia.org/wi
 
 - [Proveedor de servicios de tokens (TSP)](Tokenization.md#tps)
 
-- [Validación de un token de pago](Redeem-PaymentToken.md)
+- [Validación de un token transaccional](Redeem-PaymentToken.md)
