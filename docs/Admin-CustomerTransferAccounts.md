@@ -4,7 +4,7 @@ Expone las operaciones que facilitan la administración de las cuentas para tran
 
 ## Consultar cuentas registradas de un cliente
 
-Obtiene la información de las cuentas vinculas a un cliente para realizar transferencia de fondos.
+Obtiene la información de las cuentas vinculadas a un cliente para realizar transferencia de fondos.
 
 > Cuando el cliente no tiene cuentas registradas la respuesta será una lista vacía.
 
@@ -16,8 +16,8 @@ GET | /app/transfers/accounts/{DocType}/{DocNumber} | [x]
 
 Campo | Tipo de dato | Descripción | Requerido
 :---: | :----------: | ----------- | :-------:
-{DocType} | `string` | Tipo de documento del cliente que tiene vinculadas las cuentas. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. Valor esperado en la la URL sin corchetes. | [x]
-{DocNumber} | `string` | Número de documento del cliente que tiene vinculadas las cuentas. Valor esperado en la la URL sin corchetes. | [x]
+{DocType} | `string` | Tipo de documento del cliente que tiene vinculadas las cuentas. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. Valor esperado en la URL sin corchetes. | [x]
+{DocNumber} | `string` | Número de documento del cliente que tiene vinculadas las cuentas. Valor esperado en la URL sin corchetes. | [x]
 
 #### Ejemplo en Postman
 
@@ -72,8 +72,8 @@ POST | /app/transfers/accounts/{DocType}/{DocNumber} | [x]
 
 Campo | Tipo de dato | Descripción | Requerido
 :---: | :----------: | ----------- | :-------:
-{DocType} | `string` | Tipo de documento del cliente que tiene vinculadas las cuentas. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. Valor esperado en la la URL sin corchetes. | [x]
-{DocNumber} | `string` | Número de documento del cliente al cual se vinculará la cuenta. Valor esperado en la la URL sin corchetes. | [x]
+{DocType} | `string` | Tipo de documento del cliente que tiene vinculadas las cuentas. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. Valor esperado en la URL sin corchetes. | [x]
+{DocNumber} | `string` | Número de documento del cliente al cual se vinculará la cuenta. Valor esperado en la URL sin corchetes. | [x]
 DocType | `string` | Tipo de documento del titular asociado con la cuenta. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. | [x]
 DocNumber | `string` | Número de documento del titular asociado con la cuenta. | [x]
 Alias | `string` | Nombre con el que se identificará a la cuenta. | [x]
@@ -109,9 +109,9 @@ DELETE | /app/transfers/accounts/{DocType}/{DocNumber}/{Alias} | [x]
 
 Campo | Tipo de dato | Descripción | Requerido
 :---: | :----------: | ----------- | :-------:
-{DocType} | `string` | Tipo de documento del cliente que tiene vinculadas las cuentas. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. Valor esperado en la la URL sin corchetes. | [x]
-{DocNumber} | `string` | Número de documento ddel cliente que tiene vinculadas las cuentas. Valor esperado en la la URL sin corchetes. | [x]
-{Alias} | `string` | Nombre con el que se identifica a la cuenta vinculada. Valor esperado en la la URL sin corchetes. | [x]
+{DocType} | `string` | Tipo de documento del cliente que tiene vinculadas las cuentas. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. Valor esperado en la URL sin corchetes. | [x]
+{DocNumber} | `string` | Número de documento ddel cliente que tiene vinculadas las cuentas. Valor esperado en la URL sin corchetes. | [x]
+{Alias} | `string` | Nombre con el que se identifica a la cuenta vinculada. Valor esperado en la URL sin corchetes. | [x]
 
 #### Ejemplo en Postman
 
