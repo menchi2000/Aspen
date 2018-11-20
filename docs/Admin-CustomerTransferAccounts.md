@@ -10,7 +10,7 @@ Obtiene la información de las cuentas vinculadas a un cliente para realizar tra
 
 Verbo | Endpoint | Requiere autenticación
 :---: | -------- | :------------:
-GET | /app/transfers/accounts/{DocType}/{DocNumber} | [x]
+GET | http://localhost/api/app/transfers/accounts/{DocType}/{DocNumber} | [x]
 
 ### Valores de la solicitud
 
