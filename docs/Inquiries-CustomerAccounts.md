@@ -10,7 +10,7 @@ Obtiene la información resumida de las cuentas o productos  asociados a un usua
 
 Verbo | Endpoint | Requiere autenticación
 :---: | -------- | :--------------------:
-GET | /app/inquires/accounts/{DocType}/{DocNumber} | [x]
+GET | http://localhost/api/app/inquires/accounts/{DocType}/{DocNumber} | [x]
 
 ### Valores de la solicitud
 
