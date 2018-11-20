@@ -14,7 +14,6 @@ PUT | /app/tokens/{Token} | [x]
 {
   "DocType": "CC",
   "DocNumber": "0000000000",
-  "ChannelKey": "ATM",
   "Metadata": "RANDOM_DATA_BY_ACQUIRER"
 }
 ```
@@ -26,7 +25,6 @@ Campo | Tipo de dato | Descripción | Requerido
 {Token} | string | Token de pago que se desea verificar. Valor en la URL sin corchetes | [x]
 DocType | string | Tipo de documento del usuario para el que se genera el token | [x]
 DocNumber | string | Número de documento del usuario para el que se genera el token | [x]
-ChannelKey | string | Cadena que identifica de manera unívoca [el canal](Get-Channels.md) para el que se generó el token | [x]
 Metadata | string | Metadatos asociados personalizados para el [TPS](Tokenization.md#tps) | [x]
 
 ## Datos de la respuesta

@@ -15,4 +15,6 @@ pages:
 - Tokenización de pagos: Tokenization.md
 - Generación de un token transaccional: Generate-PaymentToken.md
 - Validación de un token transaccional: Redeem-PaymentToken.md
-- Mensajes de respuesta: Responses.md
+- Consulta de productos de un cliente: Inquiries-CustomerAccounts.md
+- Administrar cuentas para transferencias de un cliente: Admin-CustomerTransferAccounts.md
+- Apéndice: Mensajes de respuesta: Responses.md
