@@ -6,7 +6,7 @@ Permite a un adquirente o comercio, verificar la validez de un token de pago que
 
 Verbo | Endpoint | Requiere autenticación
 :---: | -------- | :------------:
-PUT | /app/tokens/{Token} | [x]
+PUT | http://localhost/api/app/tokens/{Token} | [x]
 
 ## Datos de la solicitud
 
