@@ -21,6 +21,7 @@ Campo | Tipo de dato | Descripción | Requerido
 
 #### Ejemplo en Postman
 
+Consultar la(s) cuenta(s) registradas del cliente identificado con el tipo de documento `CC` (Cedula de ciudadanía), número `12345678`
 ![Preview](Get-TransferAccount-Request-PostmanExample.png)
 
 #### Ejemplo en curl
@@ -81,6 +82,8 @@ AccountNumber | `string` | Número de la cuenta. | [x]
 
 #### Ejemplo en Postman
 
+Registrar la cuenta `5423149228861111` del titular identificado con el tipo de documento `CC` (Cedula de ciudadanía), número `32287028` utilizando el nombre `Selene-Figueroa` y asociar esta información con el cliente identificado con el tipo de documento `CC` (Cedula de ciudadanía), número `12345678`
+
 ![Preview](Register-TransferAccount-Request-PostmanExample.png)
 
 #### Ejemplo en curl
@@ -114,6 +117,8 @@ Campo | Tipo de dato | Descripción | Requerido
 {Alias} | `string` | Nombre con el que se identifica a la cuenta vinculada. Valor esperado en la URL sin corchetes. | [x]
 
 #### Ejemplo en Postman
+
+Eliminar el registro de la cuenta identificada con el nombre `Selene-Figueroa` asociada con el cliente identificado con el tipo de documento `CC` (Cedula de ciudadanía), número `12345678`
 
 ![Preview](Unregister-TransferAccount-Request-PostmanExample.png)
 
