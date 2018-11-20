@@ -21,6 +21,7 @@ Campo | Tipo de dato | Descripción | Requerido
 
 #### Ejemplo en Postman
 
+Consultar la(s) cuenta(s) del tipo de documento `CC` (cédula de ciudadanía) y número `12345678`.
 ![Preview](Get-Account-Request-PostmanExample.png)
 
 #### Ejemplo en curl
@@ -145,10 +146,11 @@ Campo | Tipo de dato | Descripción | Requerido
 :---: | :----------: | ----------- | :-------:
 {DocType} | `string` | Tipo de documento del cliente. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Inquiries-CustomerAccounts.md#docTypes)**. Valor esperado en la URL sin corchetes. | [x]
 {DocNumber} | `string` | Número de documento del cliente. Valor esperado en la URL sin corchetes. | [x]
-{AccountId} | `string` | Identificador de la cuenta para la que se obtienen los saldos. Valor esperado en la URL sin corchetes. | [x]
+{AccountId} | `string` | Identificador de la cuenta para la que se obtienen los saldos (Corresponde con el valor del atributo `Id` de la respuesta de la consulta de cuentas). Valor esperado en la URL sin corchetes. | [x]
 
 #### Ejemplo en Postman
 
+Consultar los saldos de la cuenta `48579` asociada con el tipo de documento `CC` (cédula de ciudadanía) y número `12345678`.
 ![Preview](Get-Balance-Request-PostmanExample.png)
 
 #### Ejemplo en curl
@@ -228,11 +230,12 @@ Campo | Tipo de dato | Descripción | Requerido
 :---: | :----------: | ----------- | :-------:
 {DocType} | `string` | Tipo de documento del cliente. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Inquiries-CustomerAccounts.md#docTypes)**. Valor esperado en la URL sin corchetes. | [x]
 {DocNumber} | `string` | Número de documento del usuario. Valor esperado en la URL sin corchetes. | [x]
-{AccountId} | `string` | Identificador de la cuenta para la que se obtienen los saldos. Valor esperado en la URL sin corchetes. | [x]
-{AccountTypeId} | `string` | Identificador del tipo de cuenta. **Aplica para las cuentas débito**. Puede usar asterisco (`*`) para consultar los últimos movimientos de todo el prodcuto. Valor esperado en la URL sin corchetes. |
+{AccountId} | `string` | Identificador de la cuenta para la que se obtienen los saldos (Corresponde con el valor del atributo `Id` de la respuesta de la consulta de cuentas). Valor esperado en la URL sin corchetes. | [x]
+{AccountTypeId} | `string` | Identificador del tipo de cuenta. **Aplica para las cuentas débito**. (Corresponde con el valor del atributo `TypeId` de la respuesta de la consulta de saldos) Puede usar asterisco (`*`) para consultar los últimos movimientos de todo el producto. Valor esperado en la URL sin corchetes. |
 
 #### Ejemplo en Postman
 
+Consultar los movimientos financieros de la cuenta `48579` asociadas con el tipo de documento `CC` (cédula de ciudadanía) y número `12345678`, para el tipo de cuenta `80`.
 ![Preview](Get-Statement-Request-PostmanExample.png)
 
 #### Ejemplo en curl
