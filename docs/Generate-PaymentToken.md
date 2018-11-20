@@ -6,7 +6,7 @@ Permite al usuario generar un token, a través de una aplicación (una aplicaci�
 
 Verbo | Endpoint | Requiere autenticación
 :---: | -------- | :------------:
-POST | /me/tokens | [x]
+POST | http://localhost/api/me/tokens | [x]
 
 ## Datos de la solicitud
 
