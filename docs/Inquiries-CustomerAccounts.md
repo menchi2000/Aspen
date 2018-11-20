@@ -267,3 +267,4 @@ PAS | Pasaporte
 ## Información relacionada
 
 - [Solicitar un token de autenticación](JWT-Request.md)
+- [Mensajes de respuesta en Aspen](Responses.md)

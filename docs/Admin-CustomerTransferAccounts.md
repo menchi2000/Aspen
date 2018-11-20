@@ -6,6 +6,8 @@ Expone las operaciones que facilitan la administración de las cuentas para tran
 
 Obtiene la información de las cuentas vinculas a un cliente para realizar transferencia de fondos.
 
+> Cuando el cliente no tiene cuentas registradas la respuesta será una lista vacía.
+
 Verbo | Endpoint | Requiere autenticación
 :---: | -------- | :------------:
 GET | /app/transfers/accounts/{DocType}/{DocNumber} | [x]
@@ -14,35 +16,43 @@ GET | /app/transfers/accounts/{DocType}/{DocNumber} | [x]
 
 Campo | Tipo de dato | Descripción | Requerido
 :---: | :----------: | ----------- | :-------:
-{DocType} | `string` | Tipo de documento del cliente que tiene vinculadas las cuentas. Cualquier valor de la columna **Acrónimo** en la tabla de [Tipos de documento](Admin-CustomerTransferAccounts.md#attachedDocTypes). Valor esperado en la la URL sin corchetes. | [x]
+{DocType} | `string` | Tipo de documento del cliente que tiene vinculadas las cuentas. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. Valor esperado en la la URL sin corchetes. | [x]
 {DocNumber} | `string` | Número de documento del cliente que tiene vinculadas las cuentas. Valor esperado en la la URL sin corchetes. | [x]
+
+#### Ejemplo en Postman
+
+![Preview](Get-TransferAccount-Request-PostmanExample.png)
+
+#### Ejemplo en curl
+
+```curl
+curl -X GET \
+  http://localhost/api/app/transfers/accounts/CC/12345678 \
+  -H "X-PRO-Auth-App: 1ea2e59d-0e04-4e53-883c-d8387e23443e" \
+  -H "X-PRO-Auth-Payload: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJOb25jZSI6ImQxZGE4ZjM4LTY3MWUtNDY1..."
+```
 
 ### Datos de la respuesta
 
 ```json
 [
   {
-    "Alias": "Cuenta-1234",
-    "CardHolderName": "Katherine R. Bortz",
-    "MaskedPan": "************1234"
+    "alias": "Paloma Veliz",
+    "cardHolderName": "Paloma Veliz Chávez",
+    "maskedPan": "************6526"
   },
   {
-    "Alias": "Cuenta-5678",
-    "CardHolderName": "Doris J. Tadlock",
-    "MaskedPan": "************5678"
+    "alias": "Doris Dueñas",
+    "cardHolderName": "Doris Dueñas Urena",
+    "maskedPan": "************5678"
   },
   {
-    "Alias": "Cuenta-9101",
-    "CardHolderName": "Peggy K. Montgomery",
-    "MaskedPan": "************9101"
+    "alias": "Michelle Carrillo",
+    "cardHolderName": "Michelle Carrillo Puente",
+    "maskedPan": "************9101"
   }
 ]
 ```
-
-<div class="admonition info">
-   <p class="first admonition-title">Información adicional</p>
-   <p class="last">Cuando el cliente no tiene cuentas registradas, la respuesta siempre será una lista vacía.</p>
-</div>
 
 ### Valores de la respuesta
 
@@ -62,16 +72,30 @@ POST | /app/transfers/accounts/{DocType}/{DocNumber} | [x]
 
 Campo | Tipo de dato | Descripción | Requerido
 :---: | :----------: | ----------- | :-------:
-{DocType} | `string` | Tipo de documento del cliente al cual se vinculará la cuenta. Cualquier valor de la columna **Acrónimo** en la tabla de [Tipos de documento](Admin-CustomerTransferAccounts.md#attachedDocTypes). Valor esperado en la la URL sin corchetes. | [x]
+{DocType} | `string` | Tipo de documento del cliente que tiene vinculadas las cuentas. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. Valor esperado en la la URL sin corchetes. | [x]
 {DocNumber} | `string` | Número de documento del cliente al cual se vinculará la cuenta. Valor esperado en la la URL sin corchetes. | [x]
-DocType | `string` | Tipo de documento del titular asociado con la cuenta. Cualquier valor de la columna **Acrónimo** en la tabla de [Tipos de documento](Admin-CustomerTransferAccounts.md#attachedDocTypes). | [x]
+DocType | `string` | Tipo de documento del titular asociado con la cuenta. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. | [x]
 DocNumber | `string` | Número de documento del titular asociado con la cuenta. | [x]
 Alias | `string` | Nombre con el que se identificará a la cuenta. | [x]
 AccountNumber | `string` | Número de la cuenta. | [x]
 
+#### Ejemplo en Postman
+
+![Preview](Register-TransferAccount-Request-PostmanExample.png)
+
+#### Ejemplo en curl
+
+```curl
+curl -X POST http://localhost/api/app/transfers/accounts/CC/12345678 \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -H "X-PRO-Auth-App: 1ea2e59d-0e04-4e53-883c-d8387e23443e" \
+  -H "X-PRO-Auth-Payload: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJOb25jZSI6ImJjZTE5M2VlLTY0Y2QtNDhjMC05NzY..." \
+  -d "DocType=CC&DocNumber=32287028&Alias=Selene-Figueroa&AccountNumber=5423149228861111"
+```
+
 ### Datos de la respuesta
 
-Código de estado de HTTP de acuerdo con la especificación [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+Código de estado de HTTP de acuerdo con la especificación **[RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)** ([Valores de respuesta más utilizados](Admin-CustomerTransferAccounts.md#httpStatusCodes))
 
 ## Eliminar una cuenta registrada
 
@@ -85,27 +109,41 @@ DELETE | /app/transfers/accounts/{DocType}/{DocNumber}/{Alias} | [x]
 
 Campo | Tipo de dato | Descripción | Requerido
 :---: | :----------: | ----------- | :-------:
-{DocType} | `string` | Tipo de documento del cliente que tiene vinculadas las cuentas. Cualquier valor de la columna **Acrónimo** en la tabla de [Tipos de documento](Admin-CustomerTransferAccounts.md#attachedDocTypes). Valor esperado en la la URL sin corchetes. | [x]
+{DocType} | `string` | Tipo de documento del cliente que tiene vinculadas las cuentas. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. Valor esperado en la la URL sin corchetes. | [x]
 {DocNumber} | `string` | Número de documento ddel cliente que tiene vinculadas las cuentas. Valor esperado en la la URL sin corchetes. | [x]
 {Alias} | `string` | Nombre con el que se identifica a la cuenta vinculada. Valor esperado en la la URL sin corchetes. | [x]
 
+#### Ejemplo en Postman
+
+![Preview](Unregister-TransferAccount-Request-PostmanExample.png)
+
+#### Ejemplo en curl
+
+```curl
+curl -X DELETE \
+  http://localhost/api/app/transfers/accounts/CC/12345678/Selene-Figueroa \
+  -H "X-PRO-Auth-App: 1ea2e59d-0e04-4e53-883c-d8387e23443e" \
+  -H "X-PRO-Auth-Payload: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJOb25jZSI6ImM0Y2JiMWU2LWE0MGMtNGJkNi04MGFj..."
+```
+
 ### Datos de la respuesta
 
-Código de estado de HTTP de acuerdo con la especificación [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+Código de estado de HTTP de acuerdo con la especificación **[RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)** ([Valores de respuesta más utilizados](Admin-CustomerTransferAccounts.md#httpStatusCodes))
+## Anexos
 
-## Valores de respuesta más utilizados
+### Valores de respuesta más utilizados
+
+<div id="httpStatusCodes"></div>
 
 HttpStatus | Tipo de dato | Descripción
 :--------: | :----------: | -----------
 200 | `int` | La solicitud finalizó satisfactoriamente.
-404 | `int` | El cliente no existe en el sistema.
+406 | `int` | Alguno de los valores esperados no cumple con las validaciones.
 409 | `int` | No se encuentra información de la cuenta para vincular con los datos suministrados.
-
-## Anexos
 
 ### Tipos de documento
 
-<div id="attachedDocTypes"></div>
+<div id="docTypes"></div>
 
 Acrónimo | Descripción
 :------: | -----------
@@ -118,3 +156,4 @@ PAS | Pasaporte
 ## Información relacionada
 
 - [Solicitar un token de autenticación](JWT-Request.md)
+- [Mensajes de respuesta en Aspen](Responses.md)
