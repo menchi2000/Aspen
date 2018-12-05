@@ -55,7 +55,7 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 
 - StatusCode: 502
 - Reason: **Aspen** no ha podido redirigir la solicitud al sistema responsable de procesarla. Pónganse en contacto con nuestro equipo de monitoreo.
-- EventId: 15859
+- EventId: 15859, 40030, 40031, 40032
 
 ## BadRequest
 

@@ -252,11 +252,8 @@ curl -X GET \
 ```json
 [
   {
-    "id": 9155726,
     "tranType": "40",
     "cardAcceptor": "Almacen San Juan",
-    "responseMessage": "Transaccion Exitosa",
-    "responseCode": "00",
     "date": "2018-11-19T11:53:57.1900000-05:00",
     "amount": 1000,
     "tranName": "Transferencia",
@@ -265,11 +262,8 @@ curl -X GET \
     "accountTypeName": "Monedero General"
   },
   {
-    "id": 9155722,
     "tranType": "40",
     "cardAcceptor": "Almacen San Juan",
-    "responseMessage": "Transaccion Exitosa",
-    "responseCode": "00",
     "date": "2018-11-19T11:53:17.6230000-05:00",
     "amount": 1000,
     "tranName": "Transferencia",
@@ -278,11 +272,8 @@ curl -X GET \
     "accountTypeName": "Monedero General"
   },
   {
-    "id": 9155659,
     "tranType": "40",
     "cardAcceptor": "Almacen San Juan",
-    "responseMessage": "Transaccion Exitosa",
-    "responseCode": "00",
     "date": "2018-11-14T17:22:15.4630000-05:00",
     "amount": 1000,
     "tranName": "Transferencia",
