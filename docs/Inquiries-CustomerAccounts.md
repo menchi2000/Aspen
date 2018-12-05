@@ -127,9 +127,9 @@ Value | `string` | Valor asociado con el atributo.
 
 Valor | Nombre | Descripción
 :---: | :----: | -----------
-`0` | Tup | El origen de la información es del sistema **TUP**.
-`1` | Bancor | El origen de la información es del sistema **BANCOR**.
-`2` | HardCoded | La información se origina desde un sistema para pruebas.
+`0` | Tup | El origen de la información es el sistema de administración de tarjetas débito **TUP**.
+`1` | Bancor | El origen de la información es sistema de administración de cartera **BANCOR**.
+`2` | None | No hay un sistema definido. La información se puede utilizar con la finalidad de comprobar el funcionamiento del servicio, mientras se finalizan los acuerdos comerciales que permitan a los clientes del API, consumir la información real de los sistemas transaccionales. 
 
 ## Consultar saldos de una cuenta
 
