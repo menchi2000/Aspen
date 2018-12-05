@@ -129,6 +129,7 @@ Valor | Nombre | Descripción
 :---: | :----: | -----------
 `0` | Tup | El origen de la información es del sistema **TUP**.
 `1` | Bancor | El origen de la información es del sistema **BANCOR**.
+`2` | HardCoded | La información se origina desde un sistema para pruebas.
 
 ## Consultar saldos de una cuenta
 
@@ -138,7 +139,7 @@ Obtiene los saldos (balances) detallados de una cuenta débito.
 
 Verbo | Endpoint | Requiere autenticación
 :---: | -------- | :--------------------:
-GET | /app/inquires/accounts/{DocType}/{DocNumber}/{AccountId}/balances | [x]
+GET | http://localhost/app/inquires/accounts/{DocType}/{DocNumber}/{AccountId}/balances | [x]
 
 ### Valores de la solicitud
 
@@ -222,7 +223,7 @@ Obtiene la información de transacciones finacieras realizadas en una cuenta.
 
 Verbo | Endpoint | Requiere autenticación
 :---: | -------- | :--------------------:
-GET | /app/inquires/accounts/{DocType}/{DocNumber}/{AccountId}/{AccountTypeId}/statements | [x]
+GET | http://localhost/app/inquires/accounts/{DocType}/{DocNumber}/{AccountId}/{AccountTypeId}/statements | [x]
 
 ### Valores de la solicitud
 
