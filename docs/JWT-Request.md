@@ -104,6 +104,8 @@ Con estas dos cabeceras es hora de llamar a la operación que genera el token de
 // Install-Package RestSharp
 // https://www.nuget.org/packages/RestSharp
 
+// Hacer un POST a http://service-endpoint/api/app/auth/signin
+
 var client = new RestClient("http://service-endpoint/api");
 var request = new RestRequest("/app/auth/signin", Method.POST);
 request.AddHeader("X-PRO-Auth-App", appKey);
