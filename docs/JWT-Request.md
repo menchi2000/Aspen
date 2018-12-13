@@ -105,7 +105,7 @@ Con estas dos cabeceras es hora de llamar a la operación que genera el token de
 // https://www.nuget.org/packages/RestSharp
 
 var client = new RestClient("http://service-endpoint/api");
-var request = new RestRequest("/auth/app/signin", Method.POST);
+var request = new RestRequest("/app/auth/signin", Method.POST);
 request.AddHeader("X-PRO-Auth-App", appKey);
 request.AddHeader("X-PRO-Auth-Payload", jwt);
 IRestResponse response = client.Execute(request);
