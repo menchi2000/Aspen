@@ -121,6 +121,8 @@ if (response.StatusCode == HttpStatusCode.OK)
 ### Descripción gráfica
 ![Solicitar el token de autenticación](JWT-Request.PNG)
 
+![Procesar la respuesta](JWT-Response.PNG)
+
 ## Procesamiento de la respuesta
 
 La respuesta del servicio de autenticación será una cadena de caracteres como esta:
@@ -133,8 +135,18 @@ Este valor es en realidad una cadena JSON codificada con el valor de `appSecret`
 
 Utilizando el lenguaje de programación de su preferencia, convierta este resultado en un objeto que represente una entidad `Token` en su sistema.
 
+### Pseudocódigo
+
+```AsciiDoc
+jsonResponse = decodeResponse(signinResponse)
+
+jsonReponse.jti // Su token de autenticación. Este valor tendrá que enviarlo en adelante para cualquier operación.
+jsonReponse.exp // Representación de la fecha y hora Epoch en que expirará el token
+jsonReponse.iat // Representación de la fecha y hora Epoch en que se emitió el token
+```
+
 ### Descripción gráfica
-![Procesar la respuesta](JWT-Response.PNG)
+![Decodificar la respuesta](JWT-Decode.PNG)
 
 ### Ejemplo
 
