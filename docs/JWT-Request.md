@@ -14,6 +14,9 @@ Entonces, es importante familiarizarse con los siguientes conceptos:
 
 ---
 
+### Cabecera Content-Type
+Los valores admitidos para la cabecera [Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) son: **application/x-www-form-urlencoded** (valor predeterminado) y **application/json**. Cualquier otro valor será considerado incorrecto. Esta cabecera es opcional. 
+
 ### Nonce
 
 Es un número arbitrario que solo se puede utilizar una vez. Se trata de un número (generalmente aleatorio) emitido para garantizar que las comunicaciones antiguas no puedan reutilizarse en ataques de repetición. El algoritmo que lo genera debería asegurar una probabilidad casi nula de repetir un valor. Podría utilizar un identificador único universal como GUID o UUID o el algoritmo de su preferencia.
