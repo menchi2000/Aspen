@@ -118,6 +118,9 @@ if (response.StatusCode == HttpStatusCode.OK)
 }
 ```
 
+### Descripción gráfica
+![Solicitar el token de autenticación](JWT-Request.PNG)
+
 ## Procesamiento de la respuesta
 
 La respuesta del servicio de autenticación será una cadena de caracteres como esta:
@@ -129,6 +132,9 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiOGU0NTExYi1lY2U5LTQ2OWQtOGMzZC0
 Este valor es en realidad una cadena JSON codificada con el valor de `appSecret` que obtuvo en la sección [Registro de aplicaciones](App_Register.md).
 
 Utilizando el lenguaje de programación de su preferencia, convierta este resultado en un objeto que represente una entidad `Token` en su sistema.
+
+### Descripción gráfica
+![Procesar la respuesta](JWT-Response.PNG)
 
 ### Ejemplo
 
