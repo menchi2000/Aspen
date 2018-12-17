@@ -14,6 +14,9 @@ Entonces, es importante familiarizarse con los siguientes conceptos:
 
 ---
 
+### Cabecera Content-Type
+Los valores admitidos para la cabecera [Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) son: **application/x-www-form-urlencoded** (valor predeterminado) y **application/json**. Cualquier otro valor será considerado incorrecto. Esta cabecera es opcional. 
+
 ### Nonce
 
 Es un número arbitrario que solo se puede utilizar una vez. Se trata de un número (generalmente aleatorio) emitido para garantizar que las comunicaciones antiguas no puedan reutilizarse en ataques de repetición. El algoritmo que lo genera debería asegurar una probabilidad casi nula de repetir un valor. Podría utilizar un identificador único universal como GUID o UUID o el algoritmo de su preferencia.
@@ -104,8 +107,10 @@ Con estas dos cabeceras es hora de llamar a la operación que genera el token de
 // Install-Package RestSharp
 // https://www.nuget.org/packages/RestSharp
 
+// Hacer un POST a http://service-endpoint/api/app/auth/signin
+
 var client = new RestClient("http://service-endpoint/api");
-var request = new RestRequest("/auth/app/signin", Method.POST);
+var request = new RestRequest("/app/auth/signin", Method.POST);
 request.AddHeader("X-PRO-Auth-App", appKey);
 request.AddHeader("X-PRO-Auth-Payload", jwt);
 IRestResponse response = client.Execute(request);
@@ -115,6 +120,11 @@ if (response.StatusCode == HttpStatusCode.OK)
     var jwtResponse = response.Content;
 }
 ```
+
+### Descripción gráfica
+![Solicitar el token de autenticación](JWT-Request.PNG)
+
+![Procesar la respuesta](JWT-Response.PNG)
 
 ## Procesamiento de la respuesta
 
@@ -127,6 +137,19 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiOGU0NTExYi1lY2U5LTQ2OWQtOGMzZC0
 Este valor es en realidad una cadena JSON codificada con el valor de `appSecret` que obtuvo en la sección [Registro de aplicaciones](App_Register.md).
 
 Utilizando el lenguaje de programación de su preferencia, convierta este resultado en un objeto que represente una entidad `Token` en su sistema.
+
+### Pseudocódigo
+
+```AsciiDoc
+jsonResponse = decodeResponse(signinResponse)
+
+jsonReponse.jti // Su token de autenticación. Este valor tendrá que enviarlo en adelante para cualquier operación.
+jsonReponse.exp // Representación de la fecha y hora Epoch en que expirará el token
+jsonReponse.iat // Representación de la fecha y hora Epoch en que se emitió el token
+```
+
+### Descripción gráfica
+![Decodificar la respuesta](JWT-Decode.PNG)
 
 ### Ejemplo
 
