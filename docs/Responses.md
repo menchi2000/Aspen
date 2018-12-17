@@ -81,6 +81,12 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 - Reason: Su AppKey ha sido deshabilitado o no tiene permisos para llevar a cabo la operación. Pónganse en contacto con nuestro equipo comercial.
 - EventId: 1000478
 
+## UnauthorizedScope
+
+- StatusCode: 401
+- Reason: Su AppKey no tiene permisos para llevar a cabo la operación. Pónganse en contacto con nuestro equipo comercial.
+- EventId: 1000479
+
 ## GatewayTimeout
 
 - StatusCode: 504
