@@ -173,3 +173,8 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 - StatusCode: 504
 - Reason: No se pudo guardar la información de seguimiento de la solicitud. Se intentará de nuevo en unos minutos. 
 - EventId: 99006
+
+## AuthProviderError
+- StatusCode: 500
+- Reason: El servicio de autenticación no está generando respuestas. 
+- EventId: 30566,30567,30568,30569,30570
