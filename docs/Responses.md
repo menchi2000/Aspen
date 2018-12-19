@@ -177,4 +177,4 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 ## AuthProviderError
 - StatusCode: 500
 - Reason: El servicio de autenticación no está generando respuestas. 
-- EventId: 30566,30567,30568,30569,30570
+- EventId: 30566, 30567, 30568, 30569, 30570
