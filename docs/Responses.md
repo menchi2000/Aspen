@@ -162,3 +162,14 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 - StatusCode: 406
 - Reason: El formato del secreto que se intenta establecer para la aplicación, no cumple con alguna de las políticas. El campo `ReasonPhrase` contiene un mensaje que describe el error que encontró.
 - EventId: 15864.
+
+## HistoricalCleanerError
+
+- StatusCode: 504
+- Reason: Error al ejecutar la tarea de limpieza de la base de datos. Se intentará de nuevo en unos minutos. 
+- EventId: 99004
+
+## SaveTraceError
+- StatusCode: 504
+- Reason: No se pudo guardar la información de seguimiento de la solicitud. Se intentará de nuevo en unos minutos. 
+- EventId: 99006
