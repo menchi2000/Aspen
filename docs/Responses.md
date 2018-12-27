@@ -178,3 +178,14 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 - StatusCode: 500
 - Reason: El servicio de autenticación no está generando respuestas. 
 - EventId: 30566, 30567, 30568, 30569, 30570
+
+## NotImplemented
+- StatusCode: 501
+- Reason: No se ha establecido la configuración para el envió de mensajes de activación. Necesita establecer la configuración en el archivo de configuración del ApiKey. Pónganse en contacto con nuestro equipo de monitoreo.
+- EventId: 20099
+
+## ServiceUnavailable
+- StatusCode: 503
+- Reason: El sistema encargado de enviar los códigos de activación no está respondiendo. Pónganse en contacto con nuestro equipo de monitoreo.
+- EventId: 20100
+
