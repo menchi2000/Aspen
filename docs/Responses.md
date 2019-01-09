@@ -189,3 +189,8 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 - Reason: El sistema encargado de enviar los códigos de activación no está respondiendo. Pónganse en contacto con nuestro equipo de monitoreo.
 - EventId: 20100
 
+## ValidateIdentityFailed
+- StatusCode: 417
+- Reason: El código de activación no es valido, ha excedido el número de intentos permitidos, necesita esperar algunos segundos para intentar de nuevo o no se encontraron datos con los valores proporcionados. El campo `ReasonPhrase` contiene un mensaje que describe de forma detallada el resultado.
+- EventId: 15868
+
