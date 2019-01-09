@@ -27,7 +27,7 @@ Permite validar si el código de activación proporcionado por un usuario, corre
 
 
 ### Ejemplo en Postman
-
+![Postman](Postman-Management-ActivationCodes.png)
 
 
 ### Datos de la respuesta
