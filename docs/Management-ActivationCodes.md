@@ -20,10 +20,10 @@ Permite validar si el código de activación proporcionado por un usuario, corre
 
 |      Campo      | Tipo de dato | Descripción                                                  | Requerido |
 | :-------------: | :----------: | ------------------------------------------------------------ | :-------: |
-|      Code       |    `string`    | Código que se desea verificar. Generalmente se trata de un valor compuesto por entre cuatro y seis dígitos. La longitud puede variar entre países y entre entidades. Ejemplo: 000000 |    [X]    |
-|    Nickname     |    `string`    | Identificador del usuario en la entidad para la que se generó el código de activación. En Colombia, generalmente corresponde a la unión del tipo de documento con el número de documento del usuario en cuestión. Puede variar entre países y entre entidades. Ejemplo: CC-123456789 |    [X]    |
+|      Code       |    `string`    | Código que se desea verificar. Generalmente se trata de un valor compuesto por entre cuatro y seis dígitos. La longitud puede variar entre países y entre entidades. Ejemplo: 000000 |    [ X ]    |
+|    Nickname     |    `string`    | Identificador del usuario en la entidad para la que se generó el código de activación. En Colombia, generalmente corresponde a la unión del tipo de documento con el número de documento del usuario en cuestión. Puede variar entre países y entre entidades. Ejemplo: CC-123456789 |    [ X ]    |
 | EnrollmentAlias |    `string`    | Identificador que se desea asociar con el usuario, cuando la validación del código de autenticación es exitosa. Permite establecer un `alias` para el usuario en la entidad. Si no se proporciona un valor, se utiliza el valor de `nickname` como alias. Este alias se puede utilizar más adelante para volver al valor del `nickname` en caso de ser necesario. Ejemplo: MyUser123 |    [ ]    |
-
+|ChannelId| `string` |Identificador del canal desde donde se realiza la validación del código de activación. Este valor es opcional y será proporcionado por Processa de ser necesario.|[ ]|
 
 
 ### Ejemplo en Postman
