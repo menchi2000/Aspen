@@ -186,7 +186,7 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 
 ## ServiceUnavailable
 - StatusCode: 503
-- Reason: El sistema encargado de enviar los códigos de activación no está respondiendo. Pónganse en contacto con nuestro equipo de monitoreo.
+- Reason: El sistema encargado de procesar la solicitud no está respondiendo. Pónganse en contacto con nuestro equipo de monitoreo.
 - EventId: 20100
 
 ## ValidateIdentityFailed
