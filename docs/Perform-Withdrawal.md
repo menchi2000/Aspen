@@ -46,7 +46,10 @@ HttpStatus | Tipo | Descripción
 404 | int | El token de retiro no existe, no es válido o ya expiró. 
 406 | int | El token de retiro se validó satisfactoriamente, pero el autorizador financiero denegó la transacción.  
 
-> Indiferentemente al código de la respuesta, el token transaccional utilizado se invalidará, ya que se trata de un [OTP](https://en.wikipedia.org/wiki/One-time_password)
+<div class="admonition info">
+   <p class="first admonition-title">Nota</p>
+   <p class="last">Indiferentemente al código de la respuesta, el token transaccional utilizado se invalidará, ya que se trata de un [OTP](https://en.wikipedia.org/wiki/One-time_password).</p>
+</div>
 
 ## Ejemplo en Postman
 
