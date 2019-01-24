@@ -36,7 +36,7 @@ Esta operación no retorna información adicional al código de estado de HTTP d
 
 HttpStatus | Tipo | Descripción
 :---: | :--------: | ------------
-200 | int | El token de retiro se validó satisfactoriamente y se realizó el descuento de los fondos monetarios en la cuenta del usuario. 
+200 | int | El token se envió satisfactoriamente al usuario. 
 503 | int | No fue posible entregar el token transaccional al usuario. No se encontró en el sistema o no se tiene información para la entrega. 
 
 ## Ejemplo en Postman
