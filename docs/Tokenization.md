@@ -39,6 +39,8 @@ Un token posee al menos los siguientes atributos:
 
 Para usar la tokenización, un emisor o comerciante debe convertirse en un _**proveedor de servicios de tokens (TSP)**_.
 
+Cuando un emisor o comercio se convierte en un proveedor de servicios de tokens (TSP), Processa le asignará una cadena de caracteres aleatoria que en adelante se utilizará para establecer los valores de Metadata en el procesamiento de transacciones con Token.
+
 ### Ejemplo
 
 El usuario `U`, ingresa a la aplicación (una aplicación para dispositivos móviles, un portal transaccional, un IVR, etc.) del emisor utilizando sus credenciales y genera un token para efectuar una compra en el comercio `C`. La aplicación del emisor, solicita a `U` que ingrese el PIN transaccional, necesario para generar el token [2FA](https://en.wikipedia.org/wiki/Multi-factor_authentication). La aplicación solicita a **Aspen** la generación del token el cual queda almacenado de forma segura en una bóveda electrónica. La aplicación muestra el token a `U`. `U` se dirige a `C` y en el punto de pago menciona token como medio de pago. `C` solicita al usuario su número de identificación y token y envía esta información al emisor. El emisor verifica esta información contra la contenida en la bóveda y si coincide y se encuentra vigente, emite la autorización. 
