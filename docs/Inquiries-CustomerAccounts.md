@@ -309,6 +309,7 @@ Valor | Nombre | Descripción
 
 ## Anexos
 
+<a name="DocTypes"></a> 
 ### Tipos de documento
 
 <div id="docTypes"></div>
