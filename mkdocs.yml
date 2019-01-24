@@ -18,4 +18,6 @@ pages:
 - Consulta de productos de un cliente: Inquiries-CustomerAccounts.md
 - Administrar cuentas para transferencias de un cliente: Admin-CustomerTransferAccounts.md
 - Validar códigos de activación (SMS): Management-ActivationCodes.md
+- Retiro con token transaccional: Perform-Withdrawal.md
+- Solicitud de envío de token transaccional: Send-TrxToken.md
 - (Apéndice) Mensajes de respuesta: Responses.md
