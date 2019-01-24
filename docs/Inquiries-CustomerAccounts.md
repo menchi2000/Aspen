@@ -321,6 +321,7 @@ NIT | Número de Identificación Tributaria
 TI | Tarjeta de Identidad
 CE | Cédula de Extranjería
 PAS | Pasaporte
+CL | Celular
 
 ## Información relacionada
 
