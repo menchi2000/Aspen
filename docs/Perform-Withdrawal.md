@@ -48,8 +48,10 @@ HttpStatus | Tipo | Descripción
 
 <div class="admonition info">
    <p class="first admonition-title">Nota</p>
-   <p class="last">Indiferentemente al código de la respuesta, el token transaccional utilizado se invalidará, ya que se trata de un [OTP](https://en.wikipedia.org/wiki/One-time_password).</p>
+   <p class="last">Indiferentemente al código de la respuesta, el token transaccional utilizado se invalidará, ya que se trata de un <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a>.</p>
 </div>
+
+
 
 ## Ejemplo en Postman
 
