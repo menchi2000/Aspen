@@ -43,7 +43,7 @@ Esta operación no retorna información adicional al código de estado de HTTP d
 HttpStatus | Tipo | Descripción
 :---: | :--------: | ------------
 200 | int | El token de retiro se validó satisfactoriamente y se realizó el descuento de los fondos monetarios en la cuenta del usuario. 
-404 | int | El token de retiro no existe, no es válido o ya expiró. 
+404 | int | El token de retiro no existe, no es válido, ya expiró o fue generado por un valor diferente. 
 406 | int | El token de retiro se validó satisfactoriamente, pero el autorizador financiero denegó la transacción.  
 
 <div class="admonition info">
