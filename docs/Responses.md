@@ -194,3 +194,7 @@ La cabecera personalizada de respuesta `X-PRO-Response-Help` puede contener algu
 - Reason: El código de activación no es valido, ha excedido el número de intentos permitidos, necesita esperar algunos segundos para intentar de nuevo o no se encontraron datos con los valores proporcionados. El campo `ReasonPhrase` contiene un mensaje que describe de forma detallada el resultado.
 - EventId: 15868
 
+## FinancialUnauthorized
+- StatusCode: 406
+- Reason: El sistema autorizador rechazo la transacción. El campo `ReasonPhrase` contiene un mensaje que describe de forma detallada el resultado.
+- EventId: 87000
