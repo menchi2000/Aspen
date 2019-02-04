@@ -39,5 +39,7 @@ Código de estado de HTTP de acuerdo con la especificación [RFC 2616](https://w
 | HttpStatus | Tipo de dato | Descripción                                                  |
 | :--------: | :----------: | ------------------------------------------------------------ |
 |    200     |     `int`      | El código de activación es valido. Se asocio el valor de `alias` con `nickname` y se marcó como utilizado el código de activación. |
+|    304     |     `int`      | El código de activación ya está relacionado con el usuario. No se requiere ninguna acción adicional. |
+
 |    417     |     `int`      | El código de activación no es valido, ha excedido el número de intentos permitidos, necesita esperar algunos segundos para intentar de nuevo o no se encontraron datos con los valores proporcionados. El campo `ReasonPhrase` contiene un mensaje que describe de forma detallada el resultado. |
 
