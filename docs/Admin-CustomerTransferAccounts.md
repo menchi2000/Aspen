@@ -10,13 +10,13 @@ Obtiene la información de las cuentas vinculadas a un cliente para realizar tra
 
 Verbo | Endpoint | Requiere autenticación
 :---: | -------- | :------------:
-GET | http://localhost/api/app/transfers/accounts/{DocType}/{DocNumber} | [x]
+GET | http://localhost/api/app/transfers/accounts/docType/{DocType}/docNumber/{DocNumber} | [x]
 
 ### Valores de la solicitud
 
 Campo | Tipo de dato | Descripción | Requerido
 :---: | :----------: | ----------- | :-------:
-{DocType} | `string` | Tipo de documento del cliente que tiene vinculadas las cuentas. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. Valor esperado en la URL sin corchetes. | [x]
+{DocType} | `string` | Tipo de documento del cliente que tiene vinculada(s) la(s) cuenta(s). Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. Valor esperado en la URL sin corchetes. | [x]
 {DocNumber} | `string` | Número de documento del cliente que tiene vinculadas las cuentas. Valor esperado en la URL sin corchetes. | [x]
 
 #### Ejemplo en Postman
@@ -28,7 +28,7 @@ Consultar la(s) cuenta(s) registradas del cliente identificado con el tipo de do
 
 ```curl
 curl -X GET \
-  http://localhost/api/app/transfers/accounts/CC/12345678 \
+  http://localhost/api/app/transfers/accounts/docType/CC/docNumber/12345678 \
   -H "X-PRO-Auth-App: 1ea2e59d-0e04-4e53-883c-d8387e23443e" \
   -H "X-PRO-Auth-Payload: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJOb25jZSI6ImQxZGE4ZjM4LTY3MWUtNDY1..."
 ```
@@ -69,14 +69,14 @@ Vincula la información de una cuenta a la lista de cuentas registradas para tra
 
 Verbo | Endpoint | Requiere autenticación
 :---: | -------- | :------------:
-POST | http://localhost/app/transfers/accounts/{DocType}/{DocNumber} | [x]
+POST | http://localhost/app/transfers/accounts/docType/{DocType}/docNumber/{DocNumber} | [x]
 
 Campo | Tipo de dato | Descripción | Requerido
 :---: | :----------: | ----------- | :-------:
-{DocType} | `string` | Tipo de documento del cliente que tiene vinculadas las cuentas. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. Valor esperado en la URL sin corchetes. | [x]
-{DocNumber} | `string` | Número de documento del cliente al cual se vinculará la cuenta. Valor esperado en la URL sin corchetes. | [x]
-DocType | `string` | Tipo de documento del titular asociado con la cuenta. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. | [x]
-DocNumber | `string` | Número de documento del titular asociado con la cuenta. | [x]
+{DocType} | `string` | Tipo de documento del cliente a quien se le vincula la cuenta. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. Valor esperado en la URL sin corchetes. | [x]
+{DocNumber} | `string` | Número de documento del cliente a quien se le vincula la cuenta. Valor esperado en la URL sin corchetes. | [x]
+DocType | `string` | Tipo de documento del titular de la cuenta que se está vinculando. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. | [x]
+DocNumber | `string` | Número de documento del titular de la cuenta que se está vinculando. | [x]
 Alias | `string` | Nombre con el que se identificará a la cuenta. | [x]
 AccountNumber | `string` | Número de la cuenta. | [x]
 
@@ -89,7 +89,7 @@ Registrar la cuenta `5423149228861111` del titular identificado con el tipo de d
 #### Ejemplo en curl
 
 ```curl
-curl -X POST http://localhost/api/app/transfers/accounts/CC/12345678 \
+curl -X POST http://localhost/api/app/transfers/accounts/docType/CC/docNumber/12345678 \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -H "X-PRO-Auth-App: 1ea2e59d-0e04-4e53-883c-d8387e23443e" \
   -H "X-PRO-Auth-Payload: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJOb25jZSI6ImJjZTE5M2VlLTY0Y2QtNDhjMC05NzY..." \
@@ -106,15 +106,15 @@ Desvincula la información de una cuenta de la lista de cuentas registradas para
 
 Verbo | Endpoint | Requiere autenticación
 :---: | -------- | :------------:
-DELETE | http://localhost/app/transfers/accounts/{DocType}/{DocNumber}/{Alias} | [x]
+DELETE | http://localhost/app/transfers/accounts/docType/{DocType}/docNumber/{DocNumber}/alias/{Alias} | [x]
 
 ### Valores de la solicitud
 
 Campo | Tipo de dato | Descripción | Requerido
 :---: | :----------: | ----------- | :-------:
-{DocType} | `string` | Tipo de documento del cliente que tiene vinculadas las cuentas. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. Valor esperado en la URL sin corchetes. | [x]
-{DocNumber} | `string` | Número de documento ddel cliente que tiene vinculadas las cuentas. Valor esperado en la URL sin corchetes. | [x]
-{Alias} | `string` | Nombre con el que se identifica a la cuenta vinculada. Valor esperado en la URL sin corchetes. | [x]
+{DocType} | `string` | Tipo de documento del cliente que tiene vinculada la cuenta. Cualquier valor de la columna **Acrónimo** en el dominio de los **[Tipos de documento](Admin-CustomerTransferAccounts.md#docTypes)**. Valor esperado en la URL sin corchetes. | [x]
+{DocNumber} | `string` | Tipo de documento del cliente que tiene vinculada la cuenta. Valor esperado en la URL sin corchetes. | [x]
+{Alias} | `string` | Nombre con el que se identificó la cuenta en el momento de la vinculación. Valor esperado en la URL sin corchetes. | [x]
 
 #### Ejemplo en Postman
 
@@ -126,7 +126,7 @@ Eliminar el registro de la cuenta identificada con el nombre `Selene-Figueroa` a
 
 ```curl
 curl -X DELETE \
-  http://localhost/api/app/transfers/accounts/CC/12345678/Selene-Figueroa \
+  http://localhost/api/app/transfers/accounts/docType/CC/docNumber/12345678/alias/Selene-Figueroa \
   -H "X-PRO-Auth-App: 1ea2e59d-0e04-4e53-883c-d8387e23443e" \
   -H "X-PRO-Auth-Payload: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJOb25jZSI6ImM0Y2JiMWU2LWE0MGMtNGJkNi04MGFj..."
 ```
@@ -143,7 +143,7 @@ Código de estado de HTTP de acuerdo con la especificación **[RFC 2616](https:/
 HttpStatus | Tipo de dato | Descripción
 :--------: | :----------: | -----------
 200 | `int` | La solicitud finalizó satisfactoriamente.
-406 | `int` | Alguno de los valores esperados no cumple con las validaciones.
+400 | `int` | Alguno de los valores proporcionados es invalido.
 409 | `int` | No se encuentra información de la cuenta para vincular con los datos suministrados.
 
 ### Tipos de documento
