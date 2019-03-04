@@ -15,7 +15,7 @@ pages:
 - Tokenización de pagos: Tokenization.md
 - Generación de un token transaccional: Generate-PaymentToken.md
 - Validación de un token transaccional: Redeem-PaymentToken.md
-- Consulta de productos de un cliente: Inquiries-CustomerAccounts.md
+- Consultas de productos financieros de un cliente: Inquiries-CustomerAccounts.md
 - Administrar cuentas para transferencias de un cliente: Admin-CustomerTransferAccounts.md
 - Validar códigos de activación (SMS): Management-ActivationCodes.md
 - Retiro con token transaccional: Perform-Withdrawal.md
