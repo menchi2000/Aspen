@@ -215,9 +215,9 @@ SourceAccountId | `string` | Identificador de la cuenta que se utilizará en pro
 TypeId | `string` | Identificador del tipo de cuenta.
 TypeName | `string` | Nombre del tipo de cuenta.
 
-## Consultar movimientos de una cuenta
+## Consultar los últimos movimientos de una cuenta
 
-Obtiene la información de transacciones finacieras realizadas en una cuenta.
+Obtiene la información de las últimas transacciones finacieras realizadas en una cuenta.
 
 > Cuando la cuenta no presenta movimientos la respuesta será una lista vacía.
 
