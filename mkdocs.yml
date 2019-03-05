@@ -13,7 +13,15 @@ pages:
 - Enviar un token de autenticación: Send-Token.md
 - Cambiar el secreto de una aplicación: Update-AppSecret.md
 - Tokenización de pagos: Tokenization.md
-- Canales para tokens de pago: Get-Channels.md
-- Generación de un token de pago: Generate-PaymentToken.md
-- Validación de un token de pago: Redeem-PaymentToken.md
-- Mensajes de respuesta: Responses.md
+- Generación de un token transaccional: Generate-PaymentToken.md
+- Validación de un token transaccional: Redeem-PaymentToken.md
+- Consulta de productos de un cliente: Inquiries-CustomerAccounts.md
+- Administrar cuentas para transferencias de un cliente: Admin-CustomerTransferAccounts.md
+- Activación de tarjeta y asignación de clave: Perform-ActivateCard.md
+- Bloqueo de una tarjeta: Perform-LockCard.md
+- Cambio de clave de una tarjeta: Perform-ChangePin.md
+- Restablecer la clave de una tarjeta: Perform-ResetPin.md
+- Validar códigos de activación (SMS): Management-ActivationCodes.md
+- Retiro con token transaccional: Perform-Withdrawal.md
+- Solicitud de envío de token transaccional: Send-TrxToken.md
+- (Apéndice) Mensajes de respuesta: Responses.md
